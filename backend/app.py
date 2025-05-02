@@ -9,7 +9,7 @@ def resolver_tsp():
     ruta_str = ' → '.join(ruta)
     return f"""
     <html>
-        <head><title>Resultado TSP</title></head>
+        <head><title>Resultado TSP </title></head>
         <body>
             <h1>TSP con Hill Climbing Iterativo</h1>
             <p><strong>Ruta:</strong> {ruta_str}</p>
