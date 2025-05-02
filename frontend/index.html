@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TSP Hill Climbing</title>
+</head>
+<body>
+  <h1>TSP  con Hill Climbing Iterativo</h1>
+  <button onclick="resolver()">Calcular Ruta</button>
+  <p id="resultado"></p>
+
+  <script>
+    async function resolver() {
+      const res = await fetch("http://127.0.0.1:5000/resolver");
+      const data = await res.json();
+      document.getElementById("resultado").innerText =
+        "Ruta: " + data.ruta.join(" → ") + "\nDistancia total: " + data.distancia.toFixed(2);
+    }
+  </script>
+</body>
+</html>
